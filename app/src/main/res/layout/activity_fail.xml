@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/modal_shape"
+    android:padding="30dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sadly"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/darkgray"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/youlost"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="30sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/failed"
+        app:lottie_loop="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/homeButton"
+            android:textSize="15sp"
+            android:fontFamily="@font/promptfontfile"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_rectangle_start"
+            android:layout_gravity="center"
+            android:onClick="go_backHP"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/replayButton"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/promptfontfile"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_rectangle_quit"
+            android:layout_gravity="center"
+            android:onClick="replay_fail"/>
+
+    </LinearLayout>
+
+</LinearLayout>

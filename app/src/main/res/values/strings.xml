@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">GUESS THE NUMBER</string>
+
+
+    <string name="greetings">WELCOME BACK</string>
+
+    <!--HELP PAGE-->
+    <string name="howToPlayTitle">HOW TO PLAY</string>
+    <string name="howtoplay">Once You Start A Game You Need To Choose A Difficulty Level And Set Your Nickname (Hopefully You\'ll See It In The TOP 10). Once The Game Starts You\'ll See A Countdown Launching And A Random Number Between 1 And 1000 Is Randomly Selected. And Here Your Guessing Starts, The Number Of Attempts And Passed Seconds Will make The Difference In Your Score. When The Time Is Over And You Still Haven\'t Guessed It Yet It\'s GAME OVER!\nHowever, Worry Not! You\'ll Get Help Upon Every Try You Make (Whether Your Guess Is Higher Or Lesser).</string>
+    <string name="goodluck">GOOD LUCK !</string>
+
+    <!--OTHER PAGES-->
+    <string name="yourguess">Your Guess</string>
+    <string name="makeguess">MAKE YOUR GUESS</string>
+    <string name="initCounter">00:00</string>
+    <string name="initAttempts">00</string>
+    <string name="prevGuesses">PREVIOUS GUESSES</string>
+    <string name="number">N°</string>
+    <string name="guess">GUESS</string>
+    <string name="time">TIME</string>
+    <string name="nickname">Nickname</string>
+    <string name="settings">SETTINGS</string>
+
+    <!--WON | LOST MODALS-->
+    <string name="sadly">SADLY</string>
+    <string name="youlost">YOU LOST!</string>
+    <string name="youwon">YOU WON!</string>
+    <string name="level">LEVEL</string>
+    <string name="gameOver">GAME OVER</string>
+    <string name="score">SCORE</string>
+    <string name="timeSpent">TIME SPENT</string>
+    <string name="attempts">ATTEMPTS</string>
+
+
+    <!--BUTTONS-->
+    <string name="homeButton">HOME</string>
+    <string name="helpButton">HELP</string>
+    <string name="quitButton">QUIT</string>
+    <string name="submitButton">SUBMIT</string>
+    <string name="playButton">PLAY</string>
+    <string name="replayButton">REPLAY</string>
+    <string name="startButton">START</string>
+    <string name="restartButton">RESTART</string>
+
+    <!--SCOREBOARD-->
+    <string-array name="difficulty_levels">
+        <item>DIFFICULTY LEVEL</item>
+        <item>EASY</item>
+        <item>MEDIUM</item>
+        <item>HARD</item>
+    </string-array>
+
+    <string name="easy">EASY</string>
+    <string name="medium">MEDIUM</string>
+    <string name="hard">HARD</string>
+
+</resources>

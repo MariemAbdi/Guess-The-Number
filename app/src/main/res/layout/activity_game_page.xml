@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".Game_Page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitStart"
+            android:src="@drawable/arrow_back"
+            android:onClick="quitgame"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/trophy"
+            android:onClick="showscroeboard" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/attempts_counting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/initCounter"
+        android:background="@drawable/rounded_rectangle_attempts"
+        android:fontFamily="@font/promptfontfile"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="20dp">
+
+      <TextView
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/makeguess"
+          android:textColor="@color/darkblue"
+          android:textStyle="bold"
+          android:fontFamily="@font/promptfontfile"
+          android:textSize="25sp"
+          android:layout_marginBottom="20dp"/>
+
+      <TextView
+          android:id="@+id/counttime"
+          android:layout_width="match_parent"
+          android:gravity="center"
+          android:textSize="30sp"
+          android:textStyle="bold"
+          android:fontFamily="@font/promptfontfile"
+          android:textColor="@color/white"
+          android:layout_height="wrap_content"
+          android:text="@string/initCounter"
+          android:layout_marginBottom="20dp"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/rounded_edittext"
+          android:layout_marginBottom="25dp"
+          android:elevation="2dp">
+          <EditText
+              android:id="@+id/guess"
+              android:background="@drawable/rounded_edittext"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="5"
+              android:hint="@string/yourguess"
+              android:drawableStart="@drawable/number"
+              android:drawablePadding="5dp"
+              android:textColorHint="@color/darkgray"
+              android:textColor="@color/black"
+              android:inputType="number"
+              android:padding="15dp"
+              android:textSize="20sp"
+              />
+          <ImageView
+              android:id="@+id/clear"
+              android:layout_width="0dp"
+              android:layout_height="30dp"
+              android:layout_gravity="center_vertical"
+              android:layout_weight="1"
+              android:src="@drawable/clear"
+              android:visibility="gone"
+              android:onClick="clearGuess"
+              />
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginBottom="30dp">
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/submitButton"
+              android:id="@+id/submitguess"
+              android:textSize="18sp"
+              android:layout_weight="1"
+              android:scaleType="fitStart"
+              android:fontFamily="@font/promptfontfile"
+              android:textColor="@color/white"
+              android:background="@drawable/rounded_rectangle_start"
+              android:layout_gravity="center"
+              android:onClick="submit"/>
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/restartButton"
+              android:textSize="18sp"
+              android:layout_marginStart="10dp"
+              android:layout_weight="1"
+              android:scaleType="fitEnd"
+              android:fontFamily="@font/promptfontfile"
+              android:textColor="@color/white"
+              android:background="@drawable/rounded_rectangle_quit"
+              android:layout_gravity="center"
+              android:onClick="restart"/>
+      </LinearLayout>
+
+
+      <TextView
+          android:layout_gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/prevGuesses"
+          android:textColor="@color/darkpink"
+          android:textStyle="bold"
+          android:fontFamily="@font/promptfontfile"
+          android:textSize="20sp"
+          android:layout_marginBottom="5dp"/>
+
+      <TableLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="0dp"
+          android:stretchColumns="*">
+
+          <TableRow
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:padding="10dp">
+
+              <TextView
+                  android:textColor="@color/white"
+                  android:fontFamily="serif"
+                  android:layout_height="wrap_content"
+                  android:layout_width="0dp"
+                  android:gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="20sp"
+                  android:layout_weight="1"
+                  android:text="@string/number"/>
+
+              <TextView
+                  android:textColor="@color/white"
+                  android:fontFamily="serif"
+                  android:layout_height="wrap_content"
+                  android:layout_width="0dp"
+                  android:gravity="center"
+                  android:textStyle="bold"
+                  android:textSize="20sp"
+                  android:layout_weight="1"
+                  android:text="@string/guess"/>
+
+              <TextView
+                  android:textColor="@color/white"
+                  android:gravity="center"
+                  android:fontFamily="serif"
+                  android:layout_height="wrap_content"
+                  android:layout_width="0dp"
+                  android:textStyle="bold"
+                  android:textSize="20sp"
+                  android:layout_weight="1"
+                  android:text="@string/time"/>
+
+          </TableRow>
+          <View
+              android:layout_height="5dp"
+              android:layout_width="match_parent"
+              android:background="@color/white"/>
+
+      </TableLayout>
+
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fadingEdge="none"
+          android:fillViewport="true">
+
+          <TableLayout
+              android:id="@+id/table_layout"
+              android:gravity="center"
+              android:background="@color/white"
+              android:layout_gravity="top|center"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="30dp"
+              android:stretchColumns="*">
+          </TableLayout>
+      </ScrollView>
+
+  </LinearLayout>
+
+</LinearLayout>

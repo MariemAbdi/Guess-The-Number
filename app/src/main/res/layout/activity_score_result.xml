@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@drawable/modal_shape">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="25dp">
+       <TextView
+           android:id="@+id/difficult"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:textColor="@color/orange"
+           android:scaleType="fitStart"
+           android:text="@string/level"
+           android:gravity="center_vertical"
+           android:fontFamily="@font/promptfontfile"
+           android:textSize="15sp"
+           />
+
+       <ImageView
+           android:layout_width="0dp"
+           android:layout_height="30dp"
+           android:layout_weight="1"
+           android:scaleType="fitEnd"
+           android:src="@drawable/trophy"
+           android:onClick="showscroeboard" />
+   </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gameOver"
+        android:textColor="@color/darkblue"
+        android:textStyle="bold"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="35sp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/youwon"
+        android:textColor="@color/lightblue"
+        android:textStyle="bold"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="25sp"
+        android:text="@string/nickname"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/won"
+        app:lottie_loop="true"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkgray"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="@string/score"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="18sp"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="@string/score"
+        android:fontFamily="@font/promptfontfile"
+        android:textSize="30sp"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgray"
+            android:textStyle="bold"
+            android:text="@string/timeSpent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitStart"
+            android:fontFamily="@font/promptfontfile"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkgray"
+            android:textStyle="bold"
+            android:text="@string/attempts"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleType="fitEnd"
+            android:fontFamily="@font/promptfontfile"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/time_spent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/initAttempts"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitStart"
+            android:fontFamily="@font/promptfontfile"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/attempts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/initAttempts"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:scaleType="fitEnd"
+            android:fontFamily="@font/promptfontfile"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/homeButton"
+            android:textSize="15sp"
+            android:fontFamily="@font/promptfontfile"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_rectangle_start"
+            android:layout_gravity="center"
+            android:onClick="go_backHP"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/replayButton"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/promptfontfile"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_rectangle_quit"
+            android:layout_gravity="center"
+            android:onClick="replay_success"/>
+
+    </LinearLayout>
+
+</LinearLayout>
